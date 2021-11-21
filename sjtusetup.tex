@@ -13,20 +13,10 @@
   info = {%
     %
     % 标题
+    %   可使用“\\”命令手动控制换行
     %
     title           = {上海交通大学学位论文 \LaTeX{} 模板示例文档},
     title*          = {A Sample Document for \LaTeX-based SJTU Thesis Template},
-    %
-    % 标题页标题
-    %   可使用“\\”命令手动控制换行
-    %
-    % display-title   = {上海交通大学学位论文\\ \LaTeX{} 模板示例文档},
-    % display-title*  = {A Sample Document \\ for \LaTeX-based SJTU Thesis Template},
-    %
-    % 页眉标题
-    %
-    % running-title   = {示例文档},
-    % running-title*  = {Sample Document},
     %
     % 关键词
     %
@@ -96,27 +86,23 @@
     %
     % 本科论文页眉 logo 颜色 (red/blue/black)
     %
-    % header-logo-color = black,
+    % header-logo-color = red,
+    %
+    % 本科论文封面 logo 颜色 (red/blue/black)
+    %
+    % title-logo-color = red
   },
   %
   % 名称设置
   %
   name = {
-    % bib               = {References},
-    % acknowledgements  = {谢\hspace{\ccwd}辞},
     % publications      = {攻读学位期间完成的论文},
+    % acknowledgements = {谢\hspace{\ccwd}辞},
   },
 }
 
-% 使用 BibLaTeX 处理参考文献
-%   biblatex-gb7714-2015 常用选项
-%     gbnamefmt=lowercase     姓名大小写由输入信息确定
-%     gbpub=false             禁用出版信息缺失处理
-\usepackage[backend=biber,style=gb7714-2015]{biblatex}
-% 文献表字体
-% \renewcommand{\bibfont}{\zihao{-5}}
-% 文献表条目间的间距
-\setlength{\bibitemsep}{0pt}
+% 参考文献支持宏包
+\usepackage[backend=bibtex,style=gb7714-2015,gbnamefmt=lowercase,gbpub=false,gbpunctin=false]{biblatex}
 % 导入参考文献数据库
 \addbibresource{bibdata/thesis.bib}
 
@@ -143,26 +129,14 @@
 % 附带脚注的表格
 \usepackage{threeparttable}
 
-% 附带脚注的长表格
-\usepackage{threeparttablex}
-
 % 算法环境宏包
 \usepackage[ruled,vlined,linesnumbered]{algorithm2e}
-% \usepackage{algorithm, algorithmicx, algpseudocode}
+% \usepackage{algorithm}
 
 % 代码环境宏包
 \usepackage{listings}
-\lstnewenvironment{codeblock}[1][]%
+\lstnewenvironment{codeblock}[1][]
   {\lstset{style=lstStyleCode,#1}}{}
-
-% 物理科学和技术中使用的数学符号，定义了 \qty 命令，与 siunitx 3.0 有冲突
-% \usepackage{physics}
-
-% 直立体数学符号
-\newcommand{\dd}{\mathop{}\!\mathrm{d}}
-\newcommand{\ee}{\mathrm{e}}
-\newcommand{\ii}{\mathrm{i}}
-\newcommand{\jj}{\mathrm{j}}
 
 % 国际单位制宏包
 \usepackage{siunitx}
@@ -173,7 +147,6 @@
 
 % 绘图宏包
 \usepackage{tikz}
-\usetikzlibrary{shapes.geometric, arrows}
 
 % 一些文档中用到的 logo
 \usepackage{hologo}

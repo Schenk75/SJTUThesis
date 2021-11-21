@@ -1,8 +1,8 @@
 # SJTUThesis 示例模板
 
-[![Build Status](https://github.com/sjtug/SJTUThesis/actions/workflows/build.yml/badge.svg)](https://github.com/sjtug/SJTUThesis/actions)
+[![Build Status](https://travis-ci.org/sjtug/SJTUThesis.svg?branch=master)](https://travis-ci.org/sjtug/SJTUThesis)
 [![SJTUTeX](https://img.shields.io/badge/SJTUTheis-v1.0.0rc7-green.svg)](https://github.com/sjtug/SJTUTeX) 
-[![Join Discussions](https://img.shields.io/github/discussions/sjtug/SJTUThesis)](https://github.com/sjtug/SJTUThesis/discussions)
+[![Join the chat at https://gitter.im/sjtug/SJTUThesis](https://badges.gitter.im/sjtug/SJTUThesis.svg)](https://gitter.im/sjtug/SJTUThesis?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 ## 欢迎使用上海交通大学论文模板
 
@@ -15,15 +15,11 @@
 
 ### 下载模版
 
-普通用户可以直接 `clone` 或者下载 [master.zip](https://github.com/sjtug/SJTUThesis/archive/refs/heads/master.zip)。
+普通用户可以直接 `clone` 或者在 [Github](https://github.com/sjtug/SJTUThesis) 页面下载仓库代码。
 
 ```bash
 git clone https://github.com/sjtug/SJTUThesis.git
-# ...or with SJTUG mirror
-git clone https://mirror.sjtu.edu.cn/git/SJTUThesis.git/
 ```
-
-稳定版可以在 [v1.0.0 发布页](https://github.com/sjtug/SJTUThesis/releases/tag/v1.0.0) 下载。
 
 ### Overleaf
 
@@ -31,35 +27,11 @@ git clone https://mirror.sjtu.edu.cn/git/SJTUThesis.git/
 
 [![Overleaf](https://img.shields.io/badge/overleaf-sjtuthesis-green.svg)](https://www.overleaf.com/latex/templates/sjtuthesis-latex-thesis-template-for-shanghai-jiao-tong-university/mkdwbyjbtfgg?r=b3b31f49&rm=d&rs=b)
 
-如果需要使用最新版 SJTUThesis，可以先下载 [最新版压缩包](https://github.com/sjtug/SJTUThesis/archive/refs/heads/master.zip) 或 [v1.0.0](https://github.com/sjtug/SJTUThesis/releases/tag/v1.0.0)，然后上传至 Overleaf 平台。Overleaf 默认使用 pdflatex 编译，您需要设置使用 XeLaTeX 编译器。
+如果需要使用最新版 SJTUThesis，可以先下载 [压缩包](https://github.com/sjtug/SJTUThesis/archive/refs/heads/master.zip)，然后上传至 Overleaf 平台。Overleaf 默认使用 pdflatex 编译，您需要设置使用 XeLaTeX 编译器。
 
 ## 模板使用
 
 如果你不熟悉 LaTeX 的编译流程，请**不要**直接使用编译器进行编译。针对不同的平台，模版提供了相应的编译脚本。
-
-### VSCode 用户
-
-安装“LaTeX Workshop”插件后，选择“Recipe: latexmk (latexmkrc)”编译。您可以在插件设置中设置
-
-```json
-{
-  "latex-workshop.latex.recipe.default": "lastUsed"
-}
-```
-
-从而在每次保存时自动使用这个 Recipe 进行编译。
-
-### TexStudio 用户
-
-在TexStudio的菜单栏中，Options-Configure TeXstudio界面中，修改以下两处：
-
-Commands-Latexmk一项修改为`latexmk.exe -silent -synctex=1 -xelatex %`
-
-Build-Default Compiler一项修改为`txs:///latexmk`
-
-<img src="https://user-images.githubusercontent.com/84025388/142163308-3d31f905-af78-40cb-bff1-851cdab04c87.png" width=500px/>
-
-<img src="https://user-images.githubusercontent.com/84025388/142163346-63ec7b7e-932f-44c5-90c4-3b35e435545d.png" width=500px/>
 
 ### Linux 与 macOS 用户
 
